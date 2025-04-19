@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Form</class>
+ <widget class="QWidget" name="Form">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>526</width>
+    <height>450</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true"/>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout_3">
+   <item>
+    <widget class="QLabel" name="label">
+     <property name="styleSheet">
+      <string notr="true">        font-size: 24px;  /* Larger font size for the title */
+        font-weight: bold;  /* Bold text for emphasis */
+        color: #fff;  /* Dark text color for good contrast */
+        padding: 10px;  /* Padding around the text for spacing */
+        text-align: center;  /* Center-align the text */</string>
+     </property>
+     <property name="text">
+      <string>Daily Attendence</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QTableWidget" name="table">
+     <property name="styleSheet">
+      <string notr="true">QTableWidget {
+        font-family: 'Arial';
+        font-size: 14px;
+    }</string>
+     </property>
+     <property name="editTriggers">
+      <set>QAbstractItemView::NoEditTriggers</set>
+     </property>
+     <property name="selectionMode">
+      <enum>QAbstractItemView::SingleSelection</enum>
+     </property>
+     <property name="selectionBehavior">
+      <enum>QAbstractItemView::SelectRows</enum>
+     </property>
+     <attribute name="verticalHeaderVisible">
+      <bool>false</bool>
+     </attribute>
+     <column>
+      <property name="text">
+       <string>name</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Time of Entering</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Time of leaving</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Late (m)</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Work duration (h)</string>
+      </property>
+     </column>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

@@ -1,0 +1,315 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="windowModality">
+   <enum>Qt::NonModal</enum>
+  </property>
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>524</width>
+    <height>404</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Maximum" vsizetype="Maximum">
+    <horstretch>1</horstretch>
+    <verstretch>1</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">
+/* Main Window */
+QMainWindow {
+    background-color: #0f172a;
+}
+
+/* Menu Bar */
+QMenuBar {
+    background-color: #1e293b;
+    color: #f1f5f9;
+    border: none;
+    padding: 4px;
+}
+
+QMenuBar::item {
+    background-color: transparent;
+    padding: 4px 8px;
+    margin: 2px;
+}
+
+QMenuBar::item:selected {
+    background-color: #4681A7; /* Updated blue */
+    border-radius: 4px;
+}
+
+/* Tabs */
+QTabWidget::pane {
+    border: 1px solid #334155;
+    background: #1e293b;
+}
+
+QTabBar::tab {
+    height: 50px;
+    width: 150px;
+    font-size: 18px;
+    padding: 10px;
+    margin: 2px;
+    color: #DDD;
+    background: #2d3748;
+    border: 1px solid #334155;
+    border-bottom: none;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+}
+
+QTabBar::tab:selected {
+    background: #4681A7; /* Updated blue */
+    color: white;
+    font-weight: bold;
+    border-color: #666;
+    border-bottom: 2px solid #42A0D8;
+}
+
+QTabBar::tab:hover {
+    background: #334155;
+}
+
+/* Buttons */
+QPushButton {
+    background-color:rgba(70, 128, 167, 0.66); /* Updated blue */
+    color: white;
+    border: 1px solid #2980b9;
+    border-radius: 4px;
+    padding: 5px 15px;
+    min-width: 80px;
+}
+
+QPushButton:hover {
+    background-color:rgba(32, 115, 170, 0.52);
+}
+
+QPushButton:pressed {
+    background-color: #334155;
+}
+
+/* Input Fields */
+QLineEdit, QTextEdit, QComboBox {
+    background-color: #1e293b;
+    color: #f1f5f9;
+    border: 1px solid #334155;
+    border-radius: 4px;
+    padding: 5px;
+}
+
+/* Scrollbars */
+QScrollBar:vertical {
+    border: none;
+    background: #1e293b;
+    width: 10px;
+    margin: 0px;
+}
+
+QScrollBar::handle:vertical {
+    background: #4681A7; /* Updated blue */
+    min-height: 20px;
+    border-radius: 4px;
+}
+
+QScrollBar::add-line:vertical, QScrollBar::sub-line:vertical {
+    height: 0px;
+}
+
+/* Tables */
+QTableView {
+    background-color: #1e293b;
+    color: #f1f5f9;
+    border: 1px solid #334155;
+    gridline-color: #334155;
+    alternate-background-color: #2d3748;
+}
+
+QHeaderView::section {
+    background-color: #2d3748;
+    color: #f1f5f9;
+    padding: 5px;
+    border: none;
+}
+
+/* Status Bar */
+QStatusBar {
+    background-color: #1e293b;
+    color: #AAA;
+}
+
+/* Tooltips */
+QToolTip {
+    background-color: #252525;
+    color: white;
+    border: 1px solid #334155;
+}
+QTabBar::tab {
+    padding: 6px 12px;         /* Add space around the text */
+    background: #2c3e50;
+    color: white;
+    border: 1px solid #34495e;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    min-width: 0px;            /* Important! */
+    width: auto;               /* Let width fit content */
+}
+
+QTabBar::tab:selected {
+    background: #3498db;
+    font-weight: bold;
+}
+
+QTabWidget::pane {
+    border: 1px solid #34495e;
+    top: -1px;                 /* Align pane with tabs */
+}
+
+</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <property name="sizePolicy">
+    <sizepolicy hsizetype="Maximum" vsizetype="Maximum">
+     <horstretch>0</horstretch>
+     <verstretch>0</verstretch>
+    </sizepolicy>
+   </property>
+   <layout class="QHBoxLayout" name="horizontalLayout">
+    <item>
+     <layout class="QVBoxLayout" name="verticalLayout">
+      <property name="spacing">
+       <number>8</number>
+      </property>
+      <item>
+       <spacer name="verticalSpacer">
+        <property name="orientation">
+         <enum>Qt::Vertical</enum>
+        </property>
+        <property name="sizeType">
+         <enum>QSizePolicy::Minimum</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>20</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_2">
+        <item>
+         <widget class="QPushButton" name="startVideoBtn">
+          <property name="font">
+           <font>
+            <pointsize>-1</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">font-weight : bold;
+font-size:18px;
+text-align: center;
+height:60px</string>
+          </property>
+          <property name="text">
+           <string>Start Detecting</string>
+          </property>
+          <property name="icon">
+           <iconset>
+            <normaloff>../assets/face-detection.png</normaloff>../assets/face-detection.png</iconset>
+          </property>
+          <property name="iconSize">
+           <size>
+            <width>32</width>
+            <height>32</height>
+           </size>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <widget class="QTabWidget" name="tabWidget">
+        <property name="styleSheet">
+         <string notr="true">QTabBar::tab {
+	width:150px;
+}</string>
+        </property>
+        <property name="tabPosition">
+         <enum>QTabWidget::North</enum>
+        </property>
+        <property name="currentIndex">
+         <number>0</number>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>25</width>
+          <height>25</height>
+         </size>
+        </property>
+        <property name="elideMode">
+         <enum>Qt::ElideLeft</enum>
+        </property>
+        <property name="documentMode">
+         <bool>false</bool>
+        </property>
+        <property name="movable">
+         <bool>false</bool>
+        </property>
+        <property name="tabBarAutoHide">
+         <bool>false</bool>
+        </property>
+        <widget class="QWidget" name="workers">
+         <attribute name="icon">
+          <iconset>
+           <normaloff>../assets/check-mark - Copy.png</normaloff>../assets/check-mark - Copy.png</iconset>
+         </attribute>
+         <attribute name="title">
+          <string>Daily Attend</string>
+         </attribute>
+        </widget>
+        <widget class="QWidget" name="attendenace">
+         <attribute name="icon">
+          <iconset>
+           <normaloff>../assets/clock.png</normaloff>../assets/clock.png</iconset>
+         </attribute>
+         <attribute name="title">
+          <string>History</string>
+         </attribute>
+        </widget>
+        <widget class="QWidget" name="tab">
+         <attribute name="icon">
+          <iconset>
+           <normaloff>../assets/user.png</normaloff>../assets/user.png</iconset>
+         </attribute>
+         <attribute name="title">
+          <string>Workers</string>
+         </attribute>
+        </widget>
+       </widget>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionstart">
+   <property name="text">
+    <string>start</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
